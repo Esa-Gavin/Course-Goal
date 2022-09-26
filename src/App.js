@@ -3,9 +3,14 @@ import './App.css';
 import CourseInput from './components/CourseGoals/CourseInput/CourseInput';
 
 function App() {
+
+  const addGoalHandler = enteredText => {
+
+  }
+
   return (
     <div>
-      <CourseInput />
+      <CourseInput onAddGoal={addGoalHandler} />
     </div>
   );
 }
