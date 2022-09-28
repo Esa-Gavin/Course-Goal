@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
 import './App.css';
+import CourseGoalList from './components/CourseGoals/CourseGoalList/CourseGoalList';
 import CourseInput from './components/CourseGoals/CourseInput/CourseInput';
 
 const App = () => {
@@ -26,10 +27,24 @@ const App = () => {
     });
   };
 
+  let content = (
+    <p style={{ textAlign: 'center' }} >No goals found here. Maybe add one?</p>
+  );
+
+  if (courseGoals > 0) {
+    content = (
+      <CourseGoalList items={courseGoals} onDeleteItem={deleteItemHandler} />
+    );
+  }
+
+
   return (
     <div>
-      <section>
+      <section id='goal-form'>
         <CourseInput onAddGoal={addGoalHandler} />
+      </section>
+      <section id='goals'>
+        {content}
       </section>
 
     </div>
