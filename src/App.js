@@ -19,9 +19,16 @@ const App = () => {
 
   };
 
+  const deleteItemHandler = goalId => {
+
+  }
+
   return (
     <div>
-      <CourseInput onAddGoal={addGoalHandler} />
+      <section>
+        <CourseInput onAddGoal={addGoalHandler} />
+      </section>
+
     </div>
   );
 }
