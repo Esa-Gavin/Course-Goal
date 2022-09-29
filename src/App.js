@@ -5,6 +5,9 @@ import CourseGoalList from './components/CourseGoals/CourseGoalList/CourseGoalLi
 import CourseInput from './components/CourseGoals/CourseInput/CourseInput';
 
 const App = () => {
+  // (!==) means that the operator will check whether its two, //
+  // operands are equal and it will return a boolean result //
+
 
   const [courseGoals, setCourseGoals] = useState([
     { text: 'Do all exercises!', id: 'g1' },
