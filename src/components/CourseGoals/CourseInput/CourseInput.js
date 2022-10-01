@@ -19,7 +19,7 @@ const CourseInput = (props) => {
         }
         props.onAddGoal(enteredValue);
     }
-
+    // if the input is invalid the color of the input will be red otherwise it would be black //
     return (
         <form onSubmit={formSubmitHandler}>
             <div className='form-control'>
