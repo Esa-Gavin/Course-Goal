@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { flushSync } from 'react-dom';
 
 import Button from '../../UI/Button/Button';
 import './CourseInput.css';
@@ -15,6 +16,7 @@ const CourseInput = (props) => {
     const formSubmitHandler = event => {
         event.preventDefault();
         if (enteredValue.trim().length === 0) {
+            setIsValid(false)
             return;
         }
         props.onAddGoal(enteredValue);
