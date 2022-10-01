@@ -34,7 +34,7 @@ const App = () => {
     <p style={{ textAlign: 'center' }} >No goals found here. Maybe add one?</p>
   );
 
-  if (courseGoals > 0) {
+  if (courseGoals.length > 0) {
     content = (
       <CourseGoalList items={courseGoals} onDeleteItem={deleteItemHandler} />
     );
@@ -49,9 +49,8 @@ const App = () => {
       <section id='goals'>
         {content}
       </section>
-
     </div>
   );
-}
+};
 
 export default App;
