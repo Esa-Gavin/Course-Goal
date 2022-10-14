@@ -18,7 +18,7 @@ const DivControl = styled.div`
     & input {
     display: block;
     width: 100%;
-    border: 1px solid #ccc;
+    border: 1px solid ${props => invalid ? 'red' : '#ccc'};
     font: inherit;
     line-height: 1.5rem;
     padding: 0 0.25rem;
@@ -43,6 +43,9 @@ const DivControl = styled.div`
 `;
 
 const CourseInput = (props) => {
+
+    // the dollar sign $ is an identifier which identifies an object, //
+    // the same way a name could //
 
     const [enteredValue, setEnteredValue] = useState('');
     const [isValid, setIsValid] = useState(true);
