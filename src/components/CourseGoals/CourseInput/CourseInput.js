@@ -45,7 +45,7 @@ const DivControl = styled.div`
 const CourseInput = (props) => {
 
     // the dollar sign $ is an identifier which identifies an object, //
-    // the same way a name could //
+    // the same way a name could, //
 
     const [enteredValue, setEnteredValue] = useState('');
     const [isValid, setIsValid] = useState(true);
