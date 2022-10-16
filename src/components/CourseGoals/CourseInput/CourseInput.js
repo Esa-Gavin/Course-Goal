@@ -61,7 +61,7 @@ const CourseInput = (props) => {
     // if the input is invalid the color of the input will be red otherwise it would be black//
     return (
         <form onSubmit={formSubmitHandler}>
-            <DivControl className={`form-control ${!isValid ? 'invalid' : ''}`}>
+            <DivControl invalid={!isValid}>
                 <label>Course Goal</label>
                 <input type='text' onChange={goalInputChangeHandler} />
             </DivControl>
