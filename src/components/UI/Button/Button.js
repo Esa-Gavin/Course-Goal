@@ -1,9 +1,8 @@
 import React from 'react';
 
+import classes from './Button.module.css';
+
 // import styled from 'styled-components';
-
-
-import './Button.css';
 
 // the '.button' indicates that it is a method, //
 // so any html tag can be used instead, //
@@ -38,7 +37,7 @@ import './Button.css';
 
 const Button = (props) => {
     return (
-        <button type={props.type} className='button' onClick={props.onClick}>
+        <button type={props.type} className={classes.button} onClick={props.onClick}>
             {props.children}
         </button>
     );
